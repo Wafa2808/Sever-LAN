@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "saveDate": "2023-05-15T00:00:00.000000",
+    "deviceCount": 3
+  },
+  "devices": [
+    {
+      "name": "Router1",
+      "type": "router",
+      "status": "online",
+      "interfaces": [
+        {
+          "name": "g0/0",
+          "ip": "192.168.1.1",
+          "status": "up",
+          "queueSize": 0
+        },
+        {
+          "name": "g0/1",
+          "ip": "10.0.0.1",
+          "status": "up",
+          "queueSize": 0
+        }
+      ]
+    },
+    {
+      "name": "Switch1",
+      "type": "switch",
+      "status": "online",
+      "interfaces": [
+        {
+          "name": "g0/1",
+          "ip": "",
+          "status": "up",
+          "queueSize": 0
+        }
+      ]
+    },
+    {
+      "name": "PC1",
+      "type": "host",
+      "status": "online",
+      "interfaces": [
+        {
+          "name": "eth0",
+          "ip": "10.0.0.2",
+          "status": "up",
+          "queueSize": 0
+        }
+      ]
+    }
+  ],
+  "connections": [
+    [
+      "Router1",
+      "g0/0",
+      "Switch1",
+      "g0/1"
+    ],
+    [
+      "Router1",
+      "g0/1",
+      "PC1",
+      "eth0"
+    ]
+  ]
+}
